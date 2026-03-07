@@ -1,19 +1,19 @@
 [
     {
-        "text": "",
+        "text": "Ihr Trupp erhält den Auftrag, für den Angriffstrupp eine Schlauchleitung zum Vorgehen in ein Gebäude vorzubereiten. Einsatzziel ist eine Wohnung im 1. Obergeschoss. Wie viel Schlauchreserve ordnen sie als Truppführer an?",
         "imageUrl": null,
         "answers": [
             {
                 "text": "6 C-Schläuche",
-                "isCorrect": true
+                "isCorrect": false
             },
             {
                 "text": "5 C-Schläuche",
-                "isCorrect": true
+                "isCorrect": false
             },
             {
                 "text": "1 C-Schlauch",
-                "isCorrect": true
+                "isCorrect": false
             },
             {
                 "text": "4 C-Schläuche (1 C-Länge zum Gebäude, 1C-Länge für jedes Geschoss, 2 C-Länge je Nutzungseinheit)",
@@ -26,19 +26,19 @@
         "imageUrl": null,
         "answers": [
             {
-                "text": "2 – 1 – 3 – 4",
+                "text": "2 - 1 - 3 - 4",
                 "isCorrect": false
             },
             {
-                "text": "1 – 4 – 3 – 2",
+                "text": "1 - 4 - 3 - 2",
                 "isCorrect": false
             },
             {
-                "text": "4 – 3 – 2 – 1",
+                "text": "4 - 3 - 2 - 1",
                 "isCorrect": false
             },
             {
-                "text": "1 – 2 – 3 – 4",
+                "text": "1 - 2 - 3 - 4",
                 "isCorrect": true
             }
         ]
@@ -48,19 +48,19 @@
         "imageUrl": null,
         "answers": [
             {
-                "text": "1 – 2 – 3 – 4",
+                "text": "1 - 2 - 3 - 4",
                 "isCorrect": false
             },
             {
-                "text": "2 – 4 – 3 – 1",
+                "text": "2 - 4 - 3 - 1",
                 "isCorrect": false
             },
             {
-                "text": "4 – 3 – 2 – 1",
+                "text": "4 - 3 - 2 - 1",
                 "isCorrect": false
             },
             {
-                "text": "2 – 1 – 3 – 4",
+                "text": "2 - 1 - 3 - 4",
                 "isCorrect": true
             }
         ]
@@ -568,7 +568,7 @@
         ]
     },
     {
-        "text": "Der Einheitsführer befiehlt, dass Sie mit Ihrem Trupp den nächsten Hydranten als Wasserversorgung einsatzbereit machen sollen. In etwa 25 m Entfernung zur Einsatzstelle entdecken Sie einen Unterflurhydranten, auf dem das im Bild dargestellte Fahrzeug parkt. In 100 m Entfernung sehen Sie einen Überflurhydranten – wie entscheiden Sie sich?",
+        "text": "Der Einheitsführer befiehlt, dass Sie mit Ihrem Trupp den nächsten Hydranten als Wasserversorgung einsatzbereit machen sollen. In etwa 25 m Entfernung zur Einsatzstelle entdecken Sie einen Unterflurhydranten, auf dem das im Bild dargestellte Fahrzeug parkt. In 100 m Entfernung sehen Sie einen Überflurhydranten - wie entscheiden Sie sich?",
         "imageUrl": "https://www.feuerwehr-lernbar.bayern/fileadmin/downloads/Ausbilderleitfaeden/MTA/pruefungsfragen-training/data/images/img-331a5f3b13cff89592987d705e0fac82f910002e.jpg?s=9k1f0nxbp7ki-gtp4pynwd9xd",
         "answers": [
             {
@@ -884,7 +884,7 @@
                 "isCorrect": true
             },
             {
-                "text": "Der Truppmann geht mit CM–Strahlrohr in die Wohnung vor, der Truppführer sichert von außen an der Türe ab",
+                "text": "Der Truppmann geht mit CM-Strahlrohr in die Wohnung vor, der Truppführer sichert von außen an der Türe ab",
                 "isCorrect": false
             }
         ]
