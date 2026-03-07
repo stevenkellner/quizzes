@@ -1,0 +1,1254 @@
+[
+    {
+        "text": "",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "6 C-Schläuche",
+                "isCorrect": true
+            },
+            {
+                "text": "5 C-Schläuche",
+                "isCorrect": true
+            },
+            {
+                "text": "1 C-Schlauch",
+                "isCorrect": true
+            },
+            {
+                "text": "4 C-Schläuche (1 C-Länge zum Gebäude, 1C-Länge für jedes Geschoss, 2 C-Länge je Nutzungseinheit)",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "text": "Im Rahmen einer Bewegungsfahrt kommen Sie an einem Verkehrsunfall vorbei. Ordnen Sie die Begriffe zum Umgang mit Verletzten bei Verkehrsunfällen in der richtigen Reihenfolge:​1 - Unfallstelle absichern2 - Nachalarmierung veranlassen3 - Zünndquellen fernhalten (Handy, Feuerzeug)4 - Verletzte betreuen",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "2 – 1 – 3 – 4",
+                "isCorrect": false
+            },
+            {
+                "text": "1 – 4 – 3 – 2",
+                "isCorrect": false
+            },
+            {
+                "text": "4 – 3 – 2 – 1",
+                "isCorrect": false
+            },
+            {
+                "text": "1 – 2 – 3 – 4",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "text": "Was müssen Sie bei einem Stromunfall im Niederspannungsbereich (Spannung 230 bis 400 Volt) zuerst tun? Ordnen Sie die Begriffe in der richtigen Reihenfolge!​1 - Den Verunfallten von einem gut isolierten Standort aus wegziehen2 - Die Stromlleitung spannungsfrei schalten (lassen)3 - Rettungsdienst über den Einheitsführer alarmieren4 - Erste Hilfe – Maßnahmen durchführen",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "1 – 2 – 3 – 4",
+                "isCorrect": false
+            },
+            {
+                "text": "2 – 4 – 3 – 1",
+                "isCorrect": false
+            },
+            {
+                "text": "4 – 3 – 2 – 1",
+                "isCorrect": false
+            },
+            {
+                "text": "2 – 1 – 3 – 4",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "text": "Welche Aussagen über Kohlenmonoxid sind richtig?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "brennbar",
+                "isCorrect": true
+            },
+            {
+                "text": "entsteht bei unvollkommener Verbrennung",
+                "isCorrect": true
+            },
+            {
+                "text": "leichter als Luft",
+                "isCorrect": true
+            },
+            {
+                "text": "giftig (Blut- und Nervengift)",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "text": "Welche Aussagen über Kohlenmonoxid sind richtig?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "farb-, geruch- und geschmacklos",
+                "isCorrect": true
+            },
+            {
+                "text": "entsteht bei vollkommener Verbrennung",
+                "isCorrect": false
+            },
+            {
+                "text": "ungiftig",
+                "isCorrect": false
+            },
+            {
+                "text": "schwerer als Luft",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "text": "Während des Löschangriffs (Außenangriff) entdecken Sie eine leblose Person. Welchen der folgenden Schritte führen Sie zusammen mit ihrem Truppmann im Rahmen der Patientenkontrolle aus Sicht der Ersten Hilfe vorrangig durch?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Zuerst Bewusstsein, dann Atmung kontrollieren",
+                "isCorrect": true
+            },
+            {
+                "text": "Beine und Arme hochlagern",
+                "isCorrect": false
+            },
+            {
+                "text": "Zuerst Feuer löschen, dann Verletzten betreuen",
+                "isCorrect": false
+            },
+            {
+                "text": "Zuerst Blutung stillen, dann Atmung kontrollieren",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "text": "Welche Aussagen über Kohlendioxid sind zutreffend?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "brennbar",
+                "isCorrect": false
+            },
+            {
+                "text": "steuert die Atmung, ist bei zu hoher Konzentration erstickend",
+                "isCorrect": true
+            },
+            {
+                "text": "leichter als Luft",
+                "isCorrect": false
+            },
+            {
+                "text": "entsteht bei unvollkommener Verbrennung",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "text": "Welche Aussagen über Kohlendioxid sind zutreffend?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "entsteht bei jeder Verbrennung",
+                "isCorrect": false
+            },
+            {
+                "text": "farb-, geruch- und geschmacklos",
+                "isCorrect": true
+            },
+            {
+                "text": "ungiftig",
+                "isCorrect": true
+            },
+            {
+                "text": "schwerer als Luft",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "text": "Welche Gefahren entstehen in dieser Situation?",
+        "imageUrl": "https://www.feuerwehr-lernbar.bayern/fileadmin/downloads/Ausbilderleitfaeden/MTA/pruefungsfragen-training/data/images/img-66e8a7a5f279a2398119fc837596def87a954cf4.jpg?s=9k1f0nxbp7ki-gtp4pynwd9xd",
+        "answers": [
+            {
+                "text": "Quetschen",
+                "isCorrect": true
+            },
+            {
+                "text": "Ausrutschen",
+                "isCorrect": true
+            },
+            {
+                "text": "Stolpern",
+                "isCorrect": true
+            },
+            {
+                "text": "Stürzen",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "text": "Kreuzen Sie die zur GAMS-Regel gehörenden Begriffe an.",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Alarmieren",
+                "isCorrect": false
+            },
+            {
+                "text": "Absperren, absichern",
+                "isCorrect": true
+            },
+            {
+                "text": "Grundsätze erklären",
+                "isCorrect": false
+            },
+            {
+                "text": "Motoren warten",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "text": "Kreuzen Sie die zur GAMS-Regel gehörenden Begriffe an.",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Spezialkräfte anfordern",
+                "isCorrect": true
+            },
+            {
+                "text": "Gefahr erkennen",
+                "isCorrect": true
+            },
+            {
+                "text": "Spitzenkräfte anfordern",
+                "isCorrect": false
+            },
+            {
+                "text": "Menschenrettung",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "text": "Sie erhalten als Truppführer den Auftrag, eine Saugleitung aufzubauen. Weshalb sollte der Saugkorb mind. 30 cm unter der Wasseroberfläche liegen? Kreuzen Sie die richtigen Antworten an.",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Die Saugleitung kann in dieser Stellung besser gehalten werden",
+                "isCorrect": false
+            },
+            {
+                "text": "Damit der Schmutz am Saugkorb leichter weggespült wird",
+                "isCorrect": false
+            },
+            {
+                "text": "Damit der Maschinist zum Betätigen der Ventilleine ins Wasser steigen muss",
+                "isCorrect": false
+            },
+            {
+                "text": "In dieser Stellung wird die Bildung eines Wasserstrudels (Luftsogs) und damit Ansaugschwierigkeiten vermieden",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "text": "Worauf achten Sie bei der Entnahme von Geräten aus den Fahrzeug-Geräteräumen?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Dass die Aufstiegshilfen (Haltegriffe, Trittbretter, Leitern usw.) benutzt werden",
+                "isCorrect": true
+            },
+            {
+                "text": "Dass die Geräteschlitten zur schnelleren Wiederbeladung im ausgezogenen Zustand belassen werden",
+                "isCorrect": false
+            },
+            {
+                "text": "Auf Verletzungsgefahren",
+                "isCorrect": true
+            },
+            {
+                "text": "Dass schwere Geräte von mehreren Einsatzkräften getragen werden",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "text": "Welche der folgenden Feuerlöscher können bei Bränden fester Stoffe wirkungsvoll eingesetzt werden?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Pulverlöscher mit Flammbrandpulver",
+                "isCorrect": false
+            },
+            {
+                "text": "Pulverlöscher mit Glutbrandpulver",
+                "isCorrect": true
+            },
+            {
+                "text": "Kohlendioxidlöscher",
+                "isCorrect": false
+            },
+            {
+                "text": "Feuerlöscher mit Metallbrandpulver",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "text": "Welche der folgenden Feuerlöscher können bei Bränden fester Stoffe wirkungsvoll eingesetzt werden?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Schaumlöscher",
+                "isCorrect": true
+            },
+            {
+                "text": "Pulverlöscher mit Flammbrandpulver",
+                "isCorrect": false
+            },
+            {
+                "text": "Pulverlöscher mit Glutbrandpulver",
+                "isCorrect": true
+            },
+            {
+                "text": "Wasserlöscher",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "text": "Welche der folgenden Feuerlöscher können bei Bränden flüssiger Stoffe wirkungsvoll eingesetzt werden?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Pulverlöscher mit ABC-Pulver",
+                "isCorrect": true
+            },
+            {
+                "text": "Kohlendioxidlöscher",
+                "isCorrect": true
+            },
+            {
+                "text": "Feuerlöscher mit Metallbrandpulver",
+                "isCorrect": false
+            },
+            {
+                "text": "Nasslöscher",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "text": "Welche der folgenden Feuerlöscher können bei Bränden flüssiger Stoffe wirkungsvoll eingesetzt werden?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Schaumlöscher",
+                "isCorrect": true
+            },
+            {
+                "text": "Pulverlöscher mit BC-Brandpulver",
+                "isCorrect": true
+            },
+            {
+                "text": "Nasslöscher",
+                "isCorrect": false
+            },
+            {
+                "text": "Kohlendioxidlöscher",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "text": "Was beachten Sie als Truppführer bei der Brandbekämpfung?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Keinesfalls ein Gebäude betreten",
+                "isCorrect": false
+            },
+            {
+                "text": "Ausreichende Schlauchreserve",
+                "isCorrect": true
+            },
+            {
+                "text": "Wasserabgabe immer wieder stoppen, damit der Wasserdampf abziehen kann und die Entwicklung der Löscharbeiten kontrolliert werden kann",
+                "isCorrect": true
+            },
+            {
+                "text": "Sicherheitsabstände zu elektrischen Anlagen einhalten",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "text": "Was beachten Sie als Truppführer bei der Brandbekämpfung?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Gegen den Wind angreifen",
+                "isCorrect": false
+            },
+            {
+                "text": "Die Position immer wieder wechseln, um den Brand von allen Seiten bekämpfen zu können",
+                "isCorrect": true
+            },
+            {
+                "text": "Auf eine doppelte Rückwegsicherung mit Schlauch und Feuerwehrleine beim Innenangriff",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "text": "Sie bekommen den Auftrag eine Fahrzeugbatterie abzuklemmen. Welchen Pol klemmen Sie zuerst ab?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Darf von der Feuerwehr nicht abgeklemmt werden",
+                "isCorrect": false
+            },
+            {
+                "text": "Den Minuspol",
+                "isCorrect": true
+            },
+            {
+                "text": "Den Pluspol",
+                "isCorrect": false
+            },
+            {
+                "text": "Bei modernen Fahrzeugen ist die Reihenfolge egal",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "text": "Bei einem Unfall laufen Betriebsstoffe aus. Womit können Sie kleinere Mengen ausgelaufenen Treibstoffs abdecken?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Sägespäne",
+                "isCorrect": true
+            },
+            {
+                "text": "Erde",
+                "isCorrect": true
+            },
+            {
+                "text": "Wasser",
+                "isCorrect": false
+            },
+            {
+                "text": "Ölbindemittel",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "text": "Worauf ist beim Aufstellen einer Steckleiter zu achten?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Dass immer alle 4 Leiterteile genutzt werden",
+                "isCorrect": false
+            },
+            {
+                "text": "Dass die Leiter nicht vor Fluchtwegen/Eingangstüren in Stellung gebracht wird",
+                "isCorrect": true
+            },
+            {
+                "text": "Dass 3 Sprossen bzw. 1 m Überstand eingehalten werden, wenn keine andere Möglichkeit zum Festhalten besteht",
+                "isCorrect": true
+            },
+            {
+                "text": "Auf eine sichere Verriegelung der Sperrbolzen",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "text": "Worauf ist beim Aufstellen einer Steckleiter zu achten?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Dass ein ausreichender Abstand zu spannungsführenden Teilen eingehalten wird",
+                "isCorrect": true
+            },
+            {
+                "text": "Dass die Leiter bis zur Fensteroberkante reicht",
+                "isCorrect": false
+            },
+            {
+                "text": "Dass ein Anstellwinkel von ca. 85° eingehalten wird",
+                "isCorrect": false
+            },
+            {
+                "text": "Dass der Untergrund waagrecht und tragfähig ist",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "text": "Welche taktischen Einsatzgrundsätze beachten Sie als Truppführer?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Rückzugsweg sichern",
+                "isCorrect": true
+            },
+            {
+                "text": "Truppweise geschlossen vorgehen",
+                "isCorrect": true
+            },
+            {
+                "text": "Menschenrettung hat oberste Priorität",
+                "isCorrect": true
+            },
+            {
+                "text": "Erkannte Gefahren sofort melden",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "text": "Welche taktischen Einsatzgrundsätze beachten Sie als Truppführer?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Spätestens ab der Rauchgrenze mit Wasser am Rohr vorgehen",
+                "isCorrect": true
+            },
+            {
+                "text": "Immer kriechend vorgehen",
+                "isCorrect": false
+            },
+            {
+                "text": "Löschstrahl nicht unterbrechen",
+                "isCorrect": false
+            },
+            {
+                "text": "Schaden so gering wie möglich halten",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "text": "Der Wassertrupp bekommt den Auftrag, ein Gebäude (rauchfrei) nach Personen zu durchsuchen. Wer legt die Reihenfolge der Absuche fest, wenn im Befehl des Gruppenführers kein Hinweis gegeben wurde?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Der Maschinist",
+                "isCorrect": false
+            },
+            {
+                "text": "Der Truppführer",
+                "isCorrect": true
+            },
+            {
+                "text": "Der dienstälteste Feuerwehrmann im Trupp",
+                "isCorrect": false
+            },
+            {
+                "text": "Der Truppmann",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "text": "Der Einheitsführer befiehlt, dass Sie mit Ihrem Trupp den nächsten Hydranten als Wasserversorgung einsatzbereit machen sollen. In etwa 25 m Entfernung zur Einsatzstelle entdecken Sie einen Unterflurhydranten, auf dem das im Bild dargestellte Fahrzeug parkt. In 100 m Entfernung sehen Sie einen Überflurhydranten – wie entscheiden Sie sich?",
+        "imageUrl": "https://www.feuerwehr-lernbar.bayern/fileadmin/downloads/Ausbilderleitfaeden/MTA/pruefungsfragen-training/data/images/img-331a5f3b13cff89592987d705e0fac82f910002e.jpg?s=9k1f0nxbp7ki-gtp4pynwd9xd",
+        "answers": [
+            {
+                "text": "Ich weise die Polizei an, den Fahrzeughalter ausfindig zu machen und das Entfernen des Fahrzeuges zu veranlassen",
+                "isCorrect": false
+            },
+            {
+                "text": "Wir rutschen das Fahrzeug zur Seite und machen den Unterflurhydranten einsatzbereit. Als Feuerwehrmann darf ich Sachen, die den Einsatz behindern, entfernen",
+                "isCorrect": false
+            },
+            {
+                "text": "Weil bei allen Einsatzmaßnahmen die Verhältnismäßigkeit zu beachten ist, entscheide ich mich für den Überflurhydranten, auch wenn es etwas länger dauert",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "text": "Beim Überqueren von Straßen mit Schlauchleitungen sind mindestens drei Schlauchbrücken auf einer Fahrbahnseite so auszulegen, dass Fahrzeuge verschiedener Spurbreite (PKW/LKW) die Schlauchleitung überfahren können. Der Truppführer achtet darauf, dass die Schlauchbrücken fachgerecht verlegt werden. Wie groß wählen sie den Abstand?",
+        "imageUrl": "https://www.feuerwehr-lernbar.bayern/fileadmin/downloads/Ausbilderleitfaeden/MTA/pruefungsfragen-training/data/images/img-e88550fe1e698309c7c0c67b10889fb7af052ecd.jpg?s=9k1f0nxbp7ki-gtp4pynwd9xd",
+        "answers": [
+            {
+                "text": "Etwa 3,0 m",
+                "isCorrect": false
+            },
+            {
+                "text": "Etwa 1,5 m",
+                "isCorrect": false
+            },
+            {
+                "text": "Etwa 2,5 m",
+                "isCorrect": false
+            },
+            {
+                "text": "Etwa 1,0 m",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "text": "Der Truppführer ist für die genaue Lage des Verteilers verantwortlich. Wo sollten Sie nach Möglichkeit den Verteiler nicht ablegen?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Im Schließbereich der Haustür",
+                "isCorrect": true
+            },
+            {
+                "text": "Außerhalb des Fluchtwegs",
+                "isCorrect": false
+            },
+            {
+                "text": "Außerhalb des Gefahrenbereichs",
+                "isCorrect": false
+            },
+            {
+                "text": "Im Trümmerschatten",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "text": "Als Truppführer sind Sie für die Sicherheit des Trupps verantwortlich. Welche Grundsätze beachten Sie dabei beim Auftreten atomarer Gefahren?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Abschirmungen nutzen",
+                "isCorrect": true
+            },
+            {
+                "text": "Aufenthaltsdauer begrenzen",
+                "isCorrect": true
+            },
+            {
+                "text": "Inkorporation ausschließen",
+                "isCorrect": true
+            },
+            {
+                "text": "Abstand halten",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "text": "Sie haben den Auftrag, eine brennende Scheune (Holzbauweise) abzulöschen. Worauf weisen sie Ihren Truppmann bei der Strahlrohrführung hin?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Stützen zuerst ablöschen",
+                "isCorrect": false
+            },
+            {
+                "text": "Verbindungsstellen („Knotenpunkte”) zuerst ablöschen",
+                "isCorrect": true
+            },
+            {
+                "text": "Verbindungsstellen („Knotenpunkte”) zuletzt ablöschen",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "text": "Wer bestimmt bei Einsatz von Wasser als Löschmittel, ob der Trupp die Brandbekämpfung mit Vollstrahl oder Sprühstrahl durchführt?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Der Truppführer",
+                "isCorrect": true
+            },
+            {
+                "text": "Der Strahlrohrführer",
+                "isCorrect": false
+            },
+            {
+                "text": "Der Truppmann",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "text": "Ein Feuerwehrmann wird durch den Schlauchtrupp mit Hilfe einer Feuerwehrleine gegen Absturz gesichert. Wer überprüft die korrekte Ausführung des Brustbundes?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Der Truppmann des Schlauchtrupps",
+                "isCorrect": false
+            },
+            {
+                "text": "Der Feuerwehrdienstleistende, der den Knoten angelegt hat",
+                "isCorrect": false
+            },
+            {
+                "text": "Der Truppführer des Schlauchtrupps",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "text": "Welchen Vorteil hat die festgelegte Sitzordnung im Löschfahrzeug?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Ermöglicht schon während der Anfahrt, sich auf die entsprechenden Tätigkeiten vorzubereiten",
+                "isCorrect": true
+            },
+            {
+                "text": "Keinen",
+                "isCorrect": false
+            },
+            {
+                "text": "Dient dem militärischen Drill",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "text": "Welche besonderen Aufgaben hat der Truppführer bei Anwendung der Unfallverhütungsvorschriften?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Keine, weil Truppmann und Truppführer jeweils für sich selbst verantwortlich sind",
+                "isCorrect": false
+            },
+            {
+                "text": "Der Truppführer ist für die Sicherheit des Trupps und damit für die Einhaltung der Unfallverhütungsvorschrift verantwortlich",
+                "isCorrect": true
+            },
+            {
+                "text": "Keine, weil Truppmann und Truppführer das Gleiche tun",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "text": "Muss der Truppführer seinem Truppmann bei der Brandbekämpfung Weisungen erteilen?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Nein, der Truppmann muss wissen, was zu tun ist",
+                "isCorrect": false
+            },
+            {
+                "text": "Ja, vor allem, wenn der Truppmann nicht einsatztaktisch richtig oder nicht sicherheitsgerecht vorgeht",
+                "isCorrect": true
+            },
+            {
+                "text": "Ja, wenn er dienstälter ist",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "text": "Der Truppführer bemerkt, dass sein Truppmann die Schläuche falsch auslegt. Muss der Truppführer etwas tun? Wenn ja, was?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Er muss nichts tun, denn der Truppmann hat das Auslegen ja in seiner Ausbildung gelernt und muss jetzt seine Erfahrungen selbst machen",
+                "isCorrect": false
+            },
+            {
+                "text": "Er muss den Truppmann auf das fachgerechte Auslegen hinweisen und überwachen, dass er die Hinweise beachtet",
+                "isCorrect": true
+            },
+            {
+                "text": "Er muss nichts veranlassen, weil noch nichts passiert ist und wenn, wäre es Aufgabe des Gruppenführers, etwas zu sagen",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "text": "Wer entscheidet, ob der Einsatzauftrag abgebrochen wird?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Der Maschinist",
+                "isCorrect": false
+            },
+            {
+                "text": "Der Truppführer",
+                "isCorrect": true
+            },
+            {
+                "text": "Der Truppmann",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "text": "Während der Brandbekämpfung entdecken Sie eine leblose Person. Wie verhalten Sie sich richtig?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Gemäß meinem Auftrag hat die Brandbekämpfung Vorrang. Um die Person kann ich mich erst später kümmern",
+                "isCorrect": false
+            },
+            {
+                "text": "Ich bringe die Person unverzüglich aus dem unmittelbaren Gefahrenbereich und leiste Erste Hilfe",
+                "isCorrect": true
+            },
+            {
+                "text": "Ich informiere schnellstmöglich meinen Gruppenführer",
+                "isCorrect": true
+            },
+            {
+                "text": "Ich lösche weiter und schicke meinen Truppmann zum Gruppenführer, um Meldung zu machen",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "text": "Welche Verhaltensweise ist nach psychisch belastenden Einsätzen vorteilhaft?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Nach dem Einsatz zusammensetzen, miteinander reden und evtl. PSNV hinzuziehen",
+                "isCorrect": true
+            },
+            {
+                "text": "So schnell wie möglich nach Hause gehen",
+                "isCorrect": false
+            },
+            {
+                "text": "Nur keine Schwäche zeigen",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "text": "Wie wird die Rettungsgasse auf einer Autobahn mit 3 Fahrstreifen gebildet?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Genau in der Mitte freimachen",
+                "isCorrect": false
+            },
+            {
+                "text": "Die Fahrzeuge auf der linken Spur ganz nach links, alle anderen rechts",
+                "isCorrect": true
+            },
+            {
+                "text": "Auf dem Standstreifen",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "text": "Was tun Sie als Truppführer, wenn ihr Truppmann im Einsatz plötzlich psychische Probleme hat?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Ihn aus dem Einsatzgeschehen herausnehmen, betreuen und den Einheitsführer informieren",
+                "isCorrect": true
+            },
+            {
+                "text": "Nicht weiter beachten",
+                "isCorrect": false
+            },
+            {
+                "text": "Ihm verdeutlichen, dass das Feuerwehrgeschäft eben kein Zuckerschlecken ist",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "text": "Wie wird in der Regel bei einem Wohnungsbrand vorgegangen?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Mit Strahlrohr von außen die Dachhaut kühlen",
+                "isCorrect": false
+            },
+            {
+                "text": "Truppweise unter Atemschutz",
+                "isCorrect": true
+            },
+            {
+                "text": "Der Truppmann geht mit CM–Strahlrohr in die Wohnung vor, der Truppführer sichert von außen an der Türe ab",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "text": "Was ist beim Unterbauen und Stabilisieren des im Bild gezeigten Unfallfahrzeugs (Pkw) vor einer Personenbefreiung zu beachten?",
+        "imageUrl": "https://www.feuerwehr-lernbar.bayern/fileadmin/downloads/Ausbilderleitfaeden/MTA/pruefungsfragen-training/data/images/img-87592dba3f6e8802cc6f02914b351eb27174d808.jpg?s=9k1f0nxbp7ki-gtp4pynwd9xd",
+        "answers": [
+            {
+                "text": "Es muss gegen Wegrollen gesichert werden",
+                "isCorrect": true
+            },
+            {
+                "text": "Es reicht aus die A-Säule zu unterbauen",
+                "isCorrect": false
+            },
+            {
+                "text": "Es muss mindestens an A- und B-Säule unterbaut werden",
+                "isCorrect": true
+            },
+            {
+                "text": "Es muss nicht unterbaut werden",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "text": "Was darf bei Bränden der Brandklasse D nicht als Löschmittel verwendet werden?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Wasser",
+                "isCorrect": true
+            },
+            {
+                "text": "Sand",
+                "isCorrect": false
+            },
+            {
+                "text": "D-Löschpulver",
+                "isCorrect": false
+            },
+            {
+                "text": "Zement",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "text": "Welche grundsätzlichen Aufgaben übernimmt der Angriffstrupp einer Gruppe im Löscheinsatz?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Er arbeitet ausschließlich nach Anweisung des Einsatzleiters",
+                "isCorrect": false
+            },
+            {
+                "text": "Er verlegt die C-Leitung ab dem Verteiler selbst",
+                "isCorrect": true
+            },
+            {
+                "text": "Er hat keine bestimmten Aufgaben",
+                "isCorrect": false
+            },
+            {
+                "text": "Er rettet und nimmt das erste Rohr vor",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "text": "Wo liegt die erste Absperrgrenze bei einem Einsatz mit unbekannten ABC-Gefahrstoffen (Absperrgrenze des Gefahrenbereichs)?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Mindestens 50 m",
+                "isCorrect": true
+            },
+            {
+                "text": "Mindestens 5 m",
+                "isCorrect": false
+            },
+            {
+                "text": "Mindestens 15 m",
+                "isCorrect": false
+            },
+            {
+                "text": "mindestens 20 m",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "text": "Wie viele Einsatzkräfte sind nach FwDV 10 notwendig, um eine Steckleiter aufzubauen?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Ein Trupp. Die Führung übernimmt der Truppführer",
+                "isCorrect": false
+            },
+            {
+                "text": "Zwei Trupps (4 Personen). Die Führung übernimmt einer der beiden Truppführer",
+                "isCorrect": false
+            },
+            {
+                "text": "Mindestens zwei Trupps und ein Gruppen- oder Staffelführer (5 Personen)",
+                "isCorrect": false
+            },
+            {
+                "text": "3 Personen (1 Truppführer + 2 Truppmänner) sind die Mindestanzahl",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "text": "Sie haben selbstständig einen anderen Hydranten verwendet, da der vom Gruppenführer benannte Unterflurhydrant durch einen Kleintransporter verstellt war. Was ist zu tun?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Den Gruppenführer umgehend über die geänderte Lage informieren",
+                "isCorrect": true
+            },
+            {
+                "text": "Sobald der PKW-Fahrer ausfindig gemacht werden konnte und sein Fahrzeug entfernt hat, den Schlauch auf den „richtigen“ Hydranten umkuppeln",
+                "isCorrect": false
+            },
+            {
+                "text": "Ohne vorherige Rücksprache mit dem Gruppenführer den anderen Hydranten nur verwenden, wenn sichergestellt ist, dass dadurch keine anderen Kräfte in Ihrer Tätigkeit behindert werden",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "text": "Sie sind mit einem LF 20 im Brandeinsatz. Während der Brandbekämpfung im EG ruft plötzlich im 3. Obergeschoss eine Person um Hilfe, weil das Treppenhaus verraucht ist. Mit welcher Ausstattung des LF 20 können Sie die Person aus dem 3. Obergeschoss retten?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "4-teilige Steckleiter",
+                "isCorrect": false
+            },
+            {
+                "text": "Klappleiter",
+                "isCorrect": false
+            },
+            {
+                "text": "5-teilige Steckleiter",
+                "isCorrect": false
+            },
+            {
+                "text": "3-teilige Schiebleiter",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "text": "Zu den allgemeinen Aufgaben des Truppführers gehören beispielsweise:",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Angriffsweg festlegen, soweit nicht durch den Einheitsführer vorgegeben",
+                "isCorrect": true
+            },
+            {
+                "text": "Kontrolle der persönlichen Schutzausrüstung (PSA)",
+                "isCorrect": true
+            },
+            {
+                "text": "Die Beachtung der Gefahren der Einsatzstelle",
+                "isCorrect": true
+            },
+            {
+                "text": "Das taktische Funkkonzept festzulegen",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "text": "Richtiges Verhalten des Truppführers bei Erkennen einer Eigengefährdung ist,",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "wenn aufgrund der Gefahr erforderlich, tritt der Trupp geschlossen den Rückweg an",
+                "isCorrect": true
+            },
+            {
+                "text": "wenn aufgrund der Gefahr erforderlich, tritt jeder im Trupp für sich den Rückzug an",
+                "isCorrect": false
+            },
+            {
+                "text": "ggf. Notfallmeldung - Kennwort: „Mayday“ - absetzen",
+                "isCorrect": true
+            },
+            {
+                "text": "sofortige Meldung an den Einheitsführer",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "text": "Wie reagieren Sie als Truppführer, wenn Ihr Trupp den Auftrag hat „Zur Brandbekämpfung auf der Gebäuderückseite vor!“ und sehen den im Bild dargestellten Dachaufbau?",
+        "imageUrl": "https://www.feuerwehr-lernbar.bayern/fileadmin/downloads/Ausbilderleitfaeden/MTA/pruefungsfragen-training/data/images/img-7b7ffa1a285913612f39379678b10362ab3ced4f.jpg?s=9k1f0nxbp7ki-gtp4pynwd9xd",
+        "answers": [
+            {
+                "text": "Strahlrohrabstand den Gefahren anpassen",
+                "isCorrect": true
+            },
+            {
+                "text": "Keine besondere Reaktion erforderlich",
+                "isCorrect": false
+            },
+            {
+                "text": "Meldung an den Einheitsführer „Fotovoltaikanlage vorhanden!“",
+                "isCorrect": true
+            },
+            {
+                "text": "Trupp vor herabstürzenden Teilen schützen",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "text": "Wann darf bei Unfällen in Hochspannungsanlagen mit der Menschenrettung begonnen werden?",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Erst nach Abschaltung und Freigabe durch Fachpersonal",
+                "isCorrect": true
+            },
+            {
+                "text": "In Hochspannungsanlagen darf die Feuerwehr nicht tätig werden",
+                "isCorrect": false
+            },
+            {
+                "text": "Menschenrettung kann immer durchgeführt werden, denn zur Menschenrettung kann von den Unfallverhütungsvorschriften abgewichen werden",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "text": "Warnkleidung ist zu tragen",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "bei entsprechender Anordnung des Gruppenführers",
+                "isCorrect": true
+            },
+            {
+                "text": "bei Gefahrguteinsätzen",
+                "isCorrect": false
+            },
+            {
+                "text": "bei schlechten Sichtverhältnissen",
+                "isCorrect": true
+            },
+            {
+                "text": "bei Tätigkeiten im Straßenverkehr",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "text": "Der Gesichtsschutz zum Feuerwehrhelm (Klappvisier) ist zu verwenden",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "bei Gefahren durch wegschnellende Teile",
+                "isCorrect": true
+            },
+            {
+                "text": "bei Gefahren für das Gesicht und die Augen",
+                "isCorrect": true
+            },
+            {
+                "text": "bei Gefahren beispielsweise durch Splitter",
+                "isCorrect": true
+            },
+            {
+                "text": "bei Gefahren durch Funken oder Spritzer gefährlicher Stoffe",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "text": "Beim Aufstellen von tragbaren Leitern ist auf",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "erforderliche Mindestabstände zu elektrischen Freileitungen zu achten",
+                "isCorrect": true
+            },
+            {
+                "text": "einen sicheren Stand zu achten",
+                "isCorrect": true
+            },
+            {
+                "text": "einen ausreichend festen Untergrund zu achten",
+                "isCorrect": true
+            },
+            {
+                "text": "den richtigen Anstellwinkel von ca. 65° bis 75° (mit angewinkeltem Arm prüfen) zu achten",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "text": "Die Feuerwehrleine …",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "dient als Halte- und Ventilleine",
+                "isCorrect": false
+            },
+            {
+                "text": "dient zum Einfangen von Tieren (daher die frühere Bezeichnung: „Fangleine“!)",
+                "isCorrect": false
+            },
+            {
+                "text": "ist ein Rettungsgerät, das zur ergänzenden persönlichen Ausrüstung gehört",
+                "isCorrect": true
+            },
+            {
+                "text": "dient zum Sichern von Personen",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "text": "Folgende Hinweise zur Sicherheit sind beim Einsatz einer Brechstange zu beachten:",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "Beim Heben muss die Last durch Unterbauen gesichert werden",
+                "isCorrect": true
+            },
+            {
+                "text": "Beim Einsatz ist die Klaue nicht zum Stoßen zu benutzen",
+                "isCorrect": true
+            },
+            {
+                "text": "Das maximal anzuhebende Gewicht darf nicht mehr als 10 kg betragen",
+                "isCorrect": false
+            },
+            {
+                "text": "Beim Einsatz der Brechstange ist Gesichtsschutz zu verwenden",
+                "isCorrect": true
+            }
+        ]
+    },
+    {
+        "text": "Beim Einsatz des Einreißhakens",
+        "imageUrl": null,
+        "answers": [
+            {
+                "text": "ist Gesichtsschutz erforderlich",
+                "isCorrect": true
+            },
+            {
+                "text": "kann generell auf Grundsätze, die einer Unfallverhütung dienen, verzichtet werden",
+                "isCorrect": false
+            },
+            {
+                "text": "sind Unterlegkeile zu verwenden",
+                "isCorrect": false
+            }
+        ]
+    }
+]

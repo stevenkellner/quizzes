@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MTA2 Quiz</title>
+    <meta name="language" content="de" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="topbar">
+        <h1>MTA2 Quiz</h1>
+        <p id="progress">Fragen werden geladen...</p>
+      </header>
+
+      <section id="startCard" class="card" hidden>
+        <h2 class="question">Quiz starten</h2>
+        <form id="startForm" class="start-form">
+          <label for="questionCountInput">Wie viele Fragen sollen gestellt werden?</label>
+          <div class="start-row">
+            <input id="questionCountInput" type="number" min="1" step="1" required style="width:100%;padding:12px 16px;font-size:1.2rem;font-family:inherit;border:1px solid #d5dde3;border-radius:10px;color:#1c2a33;line-height:1.4;height:auto;margin-top:10px;" />
+          </div>
+        </form>
+      </section>
+
+      <section id="questionCard" class="card" hidden>
+        <h2 id="questionText" class="question"></h2>
+        <img id="questionImage" class="question-image" alt="Fragenillustration" hidden />
+        <form id="answersForm" class="answers"></form>
+      </section>
+
+      <section id="reviewCard" class="card" hidden>
+        <h2 class="question">Falsche Antworten</h2>
+        <div id="reviewList" class="review-list"></div>
+      </section>
+
+      <div class="actions">
+        <p id="status" class="status" aria-live="polite"></p>
+        <button id="actionButton" type="button" disabled>Antwort bestätigen</button>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
