@@ -26,6 +26,7 @@ let questions = [];
 let allQuestions = [];
 let wrongAnswers = [];
 let lastRequestedCount = null;
+let quizDefaultCount = null;
 let quizStartTime = null;
 let currentIndex = 0;
 let score = 0;
@@ -70,7 +71,8 @@ function showStartCard() {
 
   questionCountInputEl.min = '1';
   questionCountInputEl.max = String(maxQuestions);
-  questionCountInputEl.value = String(lastRequestedCount !== null ? lastRequestedCount : Math.min(15, maxQuestions));
+  const defaultCount = lastRequestedCount !== null ? lastRequestedCount : (quizDefaultCount !== null ? quizDefaultCount : maxQuestions);
+  questionCountInputEl.value = String(Math.min(defaultCount, maxQuestions));
   questionCountInputEl.focus();
   setStatus('');
 }
@@ -94,6 +96,7 @@ function startQuizWithCount(requestedCount) {
 }
 
 async function loadQuiz(quiz) {
+  quizDefaultCount = (typeof quiz.defaultCount === 'number' && quiz.defaultCount > 0) ? quiz.defaultCount : null;
   document.title = quiz.title + ' Quiz';
   quizTitleEl.textContent = quiz.title + ' Quiz';
   progressEl.textContent = 'Fragen werden geladen...';
