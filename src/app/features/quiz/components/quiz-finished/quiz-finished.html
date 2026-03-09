@@ -4,19 +4,12 @@
         <div class="review-list">
             @for (wa of wrongAnswers(); track wa.question.text; let i = $index) {
                 <div class="review-entry">
-                    <p class="review-question">{{ i + 1 }}. {{ wa.question.text || '(Kein Fragetext)' }}</p>
-                    @if (wa.question.imageUrl) {
-                        <img class="question-image" [src]="wa.question.imageUrl" alt="Fragenillustration" />
-                    }
-                    @for (answer of wa.question.answers; track answer.text; let j = $index) {
-                        <div
-                            class="review-answer"
-                            [class.correct]="answer.isCorrect"
-                            [class.incorrect]="!answer.isCorrect && wa.selected.has(j)"
-                        >
-                            {{ answer.text }}
-                        </div>
-                    }
+                    <app-question-view
+                        mode="review"
+                        [question]="wa.question"
+                        [selectedInReview]="wa.selected"
+                        [questionNumber]="i + 1"
+                    />
                 </div>
             }
         </div>

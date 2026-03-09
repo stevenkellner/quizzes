@@ -1,0 +1,72 @@
+@if (searchTerm()) {
+    <p class="question-text" [innerHTML]="highlightHtml(question().text || '(Kein Fragetext)')"></p>
+} @else if (questionNumber() !== null) {
+    <p class="question-text">{{ questionNumber() }}. {{ question().text || '(Kein Fragetext)' }}</p>
+} @else {
+    <p class="question-text">{{ question().text || '(Kein Fragetext)' }}</p>
+}
+
+@if (question().imageUrl) {
+    @if (mode() === 'display') {
+        <img
+            class="question-image"
+            [src]="question().imageUrl"
+            alt="Fragenillustration"
+            loading="lazy"
+        />
+    } @else {
+        <img
+            class="question-image"
+            [src]="question().imageUrl"
+            alt="Fragenillustration"
+            (error)="onImageError($any($event.target))"
+        />
+    }
+}
+
+@if (mode() === 'interactive') {
+    <div
+        #answersRef
+        class="answers"
+        role="group"
+        aria-label="Antwortmöglichkeiten"
+    >
+        @for (answer of question().answers; track answer.text; let i = $index) {
+            <label
+                class="answer-item"
+                [class.correct]="revealed() && answer.isCorrect"
+                [class.incorrect]="revealed() && !answer.isCorrect"
+            >
+                <input
+                    type="checkbox"
+                    name="answer"
+                    [value]="i"
+                    [checked]="selectedAnswers()[i]"
+                    [disabled]="revealed()"
+                    (change)="toggleAnswer.emit(i)"
+                />
+                <span>{{ answer.text }}</span>
+            </label>
+        }
+    </div>
+} @else {
+    <div class="answers" role="list" aria-label="Antworten">
+        @for (answer of question().answers; track answer.text; let i = $index) {
+            <div
+                class="answer"
+                [class.correct]="answer.isCorrect"
+                [class.incorrect]="isIncorrectSelected(i)"
+                role="listitem"
+            >
+                @if (mode() === 'display') {
+                    <span class="marker" aria-hidden="true"></span>
+                }
+                @if (searchTerm()) {
+                    <span [innerHTML]="highlightHtml(answer.text)"></span>
+                } @else {
+                    <span>{{ answer.text }}</span>
+                }
+            </div>
+        }
+    </div>
+}

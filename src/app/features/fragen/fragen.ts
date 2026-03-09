@@ -2,13 +2,14 @@ import { ChangeDetectionStrategy, Component, computed, inject, OnInit, signal } 
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Question } from '../../models/quiz.model';
 import { QuizService } from '../../services/quiz.service';
+import { QuestionViewComponent } from '../../shared/components/question-view/question-view';
 
 @Component({
     selector: 'app-fragen',
     templateUrl: './fragen.html',
     styleUrl: './fragen.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [RouterLink],
+    imports: [RouterLink, QuestionViewComponent],
 })
 export class FragenComponent implements OnInit {
     private readonly route = inject(ActivatedRoute);
@@ -71,20 +72,5 @@ export class FragenComponent implements OnInit {
 
     protected onSearchInput(value: string): void {
         this.searchTerm.set(value);
-    }
-
-    protected highlight(text: string, term: string): string {
-        if (!term.trim()) return this.escapeHtml(text);
-        const escaped = this.escapeHtml(text);
-        const escapedTerm = term.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-        return escaped.replace(new RegExp(`(${escapedTerm})`, 'gi'), '<mark>$1</mark>');
-    }
-
-    private escapeHtml(str: string): string {
-        return str
-            .replace(/&/g, '&amp;')
-            .replace(/</g, '&lt;')
-            .replace(/>/g, '&gt;')
-            .replace(/"/g, '&quot;');
     }
 }

@@ -17,30 +17,3 @@
     }
 }
 
-.review-question {
-    margin: 0 0 10px;
-    font-weight: 600;
-    line-height: 1.4;
-    white-space: pre-line;
-}
-
-.review-answer {
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    padding: 8px 12px;
-    margin-bottom: 6px;
-    font-size: 0.95rem;
-    line-height: 1.35;
-
-    &.correct {
-        border-color: #73b894;
-        background: #edf8f1;
-        color: var(--ok);
-    }
-
-    &.incorrect {
-        border-color: #df9892;
-        background: #fdf1f0;
-        color: var(--bad);
-    }
-}

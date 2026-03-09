@@ -30,30 +30,12 @@
                 <p class="no-results">Keine Ergebnisse gefunden.</p>
             }
             @for (question of filteredQuestions(); track question.text) {
-                <article class="fragen-entry" aria-label="Frage: {{ question.text }}">
-                    <p
-                        class="fragen-question"
-                        [innerHTML]="highlight(question.text || '(Kein Fragetext)', searchTerm())"
-                    ></p>
-                    @if (question.imageUrl) {
-                        <img
-                            [src]="question.imageUrl"
-                            alt="Fragenillustration"
-                            loading="lazy"
-                        />
-                    }
-                    <div class="fragen-answers" role="list" aria-label="Antworten">
-                        @for (answer of question.answers; track answer.text) {
-                            <div
-                                class="fragen-answer"
-                                [class.correct]="answer.isCorrect"
-                                role="listitem"
-                            >
-                                <span class="marker" aria-hidden="true"></span>
-                                <span [innerHTML]="highlight(answer.text, searchTerm())"></span>
-                            </div>
-                        }
-                    </div>
+                <article class="fragen-entry">
+                    <app-question-view
+                        mode="display"
+                        [question]="question"
+                        [searchTerm]="searchTerm()"
+                    />
                 </article>
             }
         </div>

@@ -2,18 +2,19 @@ import {
     ChangeDetectionStrategy,
     Component,
     computed,
-    ElementRef,
-    output,
     input,
+    output,
     viewChild,
 } from '@angular/core';
 import { Question, StatusMessage } from '../../../../models/quiz.model';
+import { QuestionViewComponent } from '../../../../shared/components/question-view/question-view';
 
 @Component({
     selector: 'app-quiz-question',
     templateUrl: './quiz-question.html',
     styleUrl: './quiz-question.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [QuestionViewComponent],
 })
 export class QuizQuestionComponent {
     readonly question = input.required<Question>();
@@ -26,7 +27,7 @@ export class QuizQuestionComponent {
     readonly confirm = output<void>();
     readonly next = output<void>();
 
-    private readonly answersRef = viewChild<ElementRef<HTMLElement>>('answersRef');
+    private readonly questionViewRef = viewChild(QuestionViewComponent);
 
     protected readonly actionButtonText = computed(() =>
         !this.revealed()
@@ -37,9 +38,7 @@ export class QuizQuestionComponent {
     );
 
     focus(): void {
-        setTimeout(() => {
-            this.answersRef()?.nativeElement.querySelector<HTMLElement>('label')?.focus();
-        }, 0);
+        this.questionViewRef()?.focus();
     }
 
     onAction(): void {
@@ -49,8 +48,5 @@ export class QuizQuestionComponent {
             this.next.emit();
         }
     }
-
-    protected onImageError(img: HTMLImageElement): void {
-        img.hidden = true;
-    }
 }
+
