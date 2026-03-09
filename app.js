@@ -2,6 +2,14 @@ const progressEl = document.getElementById('progress');
 const statusEl = document.getElementById('status');
 const quizTitleEl = document.getElementById('quizTitle');
 const startCardEl = document.getElementById('startCard');
+const selectCardEl = document.getElementById('selectCard');
+const selectListEl = document.getElementById('selectList');
+const selectInfoEl = document.getElementById('selectInfo');
+const selectSearchEl = document.getElementById('selectSearch');
+const openSelectBtnEl = document.getElementById('openSelectBtn');
+const backToStartBtnEl = document.getElementById('backToStartBtn');
+const selectAllBtnEl = document.getElementById('selectAllBtn');
+const deselectAllBtnEl = document.getElementById('deselectAllBtn');
 const reviewCardEl = document.getElementById('reviewCard');
 const reviewListEl = document.getElementById('reviewList');
 const startFormEl = document.getElementById('startForm');
@@ -31,6 +39,9 @@ let quizStartTime = null;
 let currentIndex = 0;
 let score = 0;
 let revealed = false;
+let inSelectMode = false;
+let startedFromSelect = false;
+let selectedQuestionIndices = new Set();
 
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i -= 1) {
@@ -61,7 +72,9 @@ function showStartCard() {
   currentIndex = 0;
   score = 0;
   revealed = false;
+  inSelectMode = false;
   reviewCardEl.hidden = true;
+  selectCardEl.hidden = true;
 
   progressEl.textContent = `Anzahl der Fragen wählen (1–${maxQuestions})`;
   questionCardEl.hidden = true;
@@ -77,14 +90,104 @@ function showStartCard() {
   setStatus('');
 }
 
+function updateSelectInfo() {
+  selectInfoEl.textContent =
+    `${selectedQuestionIndices.size} von ${allQuestions.length} Fragen ausgewählt`;
+  actionButtonEl.disabled = selectedQuestionIndices.size === 0;
+}
+
+function renderSelectList(term) {
+  const q = (term || '').trim().toLowerCase();
+  selectListEl.innerHTML = '';
+  let visibleCount = 0;
+
+  allQuestions.forEach((question, idx) => {
+    const text = question.text || '';
+    const matchesQuestion = !q || text.toLowerCase().includes(q);
+    const matchesAnswer = !matchesQuestion && question.answers.some(
+      (a) => a.text.toLowerCase().includes(q)
+    );
+    if (!matchesQuestion && !matchesAnswer) return;
+    visibleCount++;
+
+    const entry = document.createElement('div');
+    entry.className = 'select-entry' + (selectedQuestionIndices.has(idx) ? ' selected' : '');
+    entry.dataset.idx = String(idx);
+
+    const num = document.createElement('span');
+    num.className = 'select-entry-num';
+    num.textContent = `${idx + 1}.`;
+
+    const textSpan = document.createElement('span');
+    textSpan.className = 'select-entry-text';
+    textSpan.textContent = text || '(Kein Fragetext)';
+
+    const checkbox = document.createElement('span');
+    checkbox.className = 'select-checkbox';
+
+    entry.appendChild(num);
+    entry.appendChild(textSpan);
+    entry.appendChild(checkbox);
+    selectListEl.appendChild(entry);
+  });
+
+  if (visibleCount === 0) {
+    selectListEl.innerHTML = '<p class="select-no-results">Keine Ergebnisse gefunden.</p>';
+  }
+}
+
+function showSelectCard() {
+  inSelectMode = true;
+  // Select all on first open; preserve selection on subsequent opens
+  if (selectedQuestionIndices.size === 0) {
+    selectedQuestionIndices = new Set(allQuestions.map((_, i) => i));
+  }
+
+  startCardEl.hidden = true;
+  questionCardEl.hidden = true;
+  reviewCardEl.hidden = true;
+  selectCardEl.hidden = false;
+
+  selectSearchEl.value = '';
+  renderSelectList('');
+  updateSelectInfo();
+
+  progressEl.textContent = 'Fragen für das Quiz auswählen';
+  actionButtonEl.textContent = 'Quiz mit Auswahl starten';
+  setStatus('');
+  selectSearchEl.focus();
+}
+
 function startQuizWithCount(requestedCount) {
   questions = shuffle([...allQuestions]).slice(0, requestedCount);
   wrongAnswers = [];
   currentIndex = 0;
   score = 0;
   revealed = false;
+  inSelectMode = false;
   reviewCardEl.hidden = true;
 
+  startCardEl.hidden = true;
+  questionCardEl.hidden = false;
+  actionButtonEl.disabled = false;
+  actionButtonEl.textContent = 'Antwort bestätigen';
+  setStatus('');
+  quizStartTime = Date.now();
+
+  renderQuestion();
+}
+
+function startQuizWithQuestions(questionsArray) {
+  questions = shuffle([...questionsArray]);
+  wrongAnswers = [];
+  currentIndex = 0;
+  score = 0;
+  revealed = false;
+  inSelectMode = false;
+  startedFromSelect = true;
+  reviewCardEl.hidden = true;
+
+  selectCardEl.hidden = true;
   startCardEl.hidden = true;
   questionCardEl.hidden = false;
   actionButtonEl.disabled = false;
@@ -159,6 +262,7 @@ async function init() {
 
 function renderQuestion() {
   const q = questions[currentIndex];
+  shuffle(q.answers);
   revealed = false;
 
   progressEl.textContent = `Frage ${currentIndex + 1} / ${questions.length} | Punkte: ${score}`;
@@ -311,6 +415,16 @@ function nextQuestionOrFinish() {
 }
 
 actionButtonEl.addEventListener('click', () => {
+  if (inSelectMode) {
+    if (selectedQuestionIndices.size === 0) {
+      setStatus('Bitte wähle mindestens eine Frage aus.', 'incorrect');
+      return;
+    }
+    const selected = Array.from(selectedQuestionIndices).map((i) => allQuestions[i]);
+    startQuizWithQuestions(selected);
+    return;
+  }
+
   if (!questions.length) {
     startFormEl.requestSubmit();
     return;
@@ -319,10 +433,52 @@ actionButtonEl.addEventListener('click', () => {
   if (!revealed) {
     revealCurrentQuestion();
   } else if (currentIndex >= questions.length) {
-    showStartCard();
+    if (startedFromSelect) {
+      showSelectCard();
+    } else {
+      showStartCard();
+    }
   } else {
     nextQuestionOrFinish();
   }
+});
+
+openSelectBtnEl.addEventListener('click', () => {
+  showSelectCard();
+});
+
+backToStartBtnEl.addEventListener('click', () => {
+  showStartCard();
+});
+
+selectAllBtnEl.addEventListener('click', () => {
+  selectedQuestionIndices = new Set(allQuestions.map((_, i) => i));
+  renderSelectList(selectSearchEl.value);
+  updateSelectInfo();
+});
+
+deselectAllBtnEl.addEventListener('click', () => {
+  selectedQuestionIndices = new Set();
+  renderSelectList(selectSearchEl.value);
+  updateSelectInfo();
+});
+
+selectSearchEl.addEventListener('input', () => {
+  renderSelectList(selectSearchEl.value);
+});
+
+selectListEl.addEventListener('click', (event) => {
+  const entry = event.target.closest('.select-entry[data-idx]');
+  if (!entry) return;
+  const idx = Number(entry.dataset.idx);
+  if (selectedQuestionIndices.has(idx)) {
+    selectedQuestionIndices.delete(idx);
+    entry.classList.remove('selected');
+  } else {
+    selectedQuestionIndices.add(idx);
+    entry.classList.add('selected');
+  }
+  updateSelectInfo();
 });
 
 startFormEl.addEventListener('submit', (event) => {
