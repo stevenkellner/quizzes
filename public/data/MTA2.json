@@ -4,11 +4,11 @@
         "imageUrl": null,
         "answers": [
             {
-                "text": "6 C-Schläuche",
+                "text": "6 C-Schläuche (2 C-Längen zum Gebäude, 1 C-Länge für jedes Geschoss, 2 C-Länge je Nutzungseinheit)",
                 "isCorrect": false
             },
             {
-                "text": "5 C-Schläuche",
+                "text": "5 C-Schläuche (2 C-Längen zum Gebäude, 1 C-Länge für jedes Geschoss, 1 C-Länge je Nutzungseinheit)",
                 "isCorrect": false
             },
             {
