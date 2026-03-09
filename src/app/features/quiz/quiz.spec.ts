@@ -62,7 +62,8 @@ describe('QuizComponent', () => {
 
     it('starts in loading state before detectChanges', () => {
         const fixture = TestBed.createComponent(QuizComponent);
-        expect((fixture.componentInstance as any).loading()).toBe(true);
+        // @ts-expect-error Accessing private method for testing
+        expect(fixture.componentInstance.loading()).toBe(true);
     });
 
     it('shows the start view after data loads', () => {
@@ -77,7 +78,8 @@ describe('QuizComponent', () => {
         const fixture = TestBed.createComponent(QuizComponent);
         fixture.detectChanges();
         vi.runAllTimers();
-        expect((fixture.componentInstance as any).quizTitle()).toBe('Test Quiz Quiz');
+        // @ts-expect-error Accessing private method for testing
+        expect(fixture.componentInstance.quizTitle()).toBe('Test Quiz Quiz');
     });
 
     it('shows an error when the quiz id is not found', () => {
@@ -102,26 +104,31 @@ describe('QuizComponent', () => {
         const fixture = TestBed.createComponent(QuizComponent);
         fixture.detectChanges();
         vi.runAllTimers();
-        expect((fixture.componentInstance as any).maxQuestions()).toBe(mockQuestions.length);
+        // @ts-expect-error Accessing private method for testing
+        expect(fixture.componentInstance.maxQuestions()).toBe(mockQuestions.length);
     });
 
     it('onStart() switches the view to "question"', () => {
         const fixture = TestBed.createComponent(QuizComponent);
         fixture.detectChanges();
         vi.runAllTimers();
-        (fixture.componentInstance as any).onStart(1);
+        // @ts-expect-error Accessing private method for testing
+        fixture.componentInstance.onStart(1);
         fixture.detectChanges();
         vi.runAllTimers();
-        expect((fixture.componentInstance as any).view()).toBe('question');
+        // @ts-expect-error Accessing private method for testing
+        expect(fixture.componentInstance.view()).toBe('question');
     });
 
     it('onStart() sets selectedAnswers to all-false for the first question', () => {
         const fixture = TestBed.createComponent(QuizComponent);
         fixture.detectChanges();
         vi.runAllTimers();
-        (fixture.componentInstance as any).onStart(1);
+        // @ts-expect-error Accessing private method for testing
+        fixture.componentInstance.onStart(1);
         vi.runAllTimers();
-        const selected: boolean[] = (fixture.componentInstance as any).selectedAnswers();
+        // @ts-expect-error Accessing private method for testing
+        const selected: boolean[] = fixture.componentInstance.selectedAnswers();
         expect(selected.every((v: boolean) => v === false)).toBe(true);
     });
 
@@ -129,78 +136,105 @@ describe('QuizComponent', () => {
         const fixture = TestBed.createComponent(QuizComponent);
         fixture.detectChanges();
         vi.runAllTimers();
-        (fixture.componentInstance as any).onStart(2);
+        // @ts-expect-error Accessing private method for testing
+        fixture.componentInstance.onStart(2);
         vi.runAllTimers();
-        expect((fixture.componentInstance as any).selectedAnswers()[0]).toBe(false);
-        (fixture.componentInstance as any).toggleAnswer(0);
-        expect((fixture.componentInstance as any).selectedAnswers()[0]).toBe(true);
-        (fixture.componentInstance as any).toggleAnswer(0);
-        expect((fixture.componentInstance as any).selectedAnswers()[0]).toBe(false);
+        // @ts-expect-error Accessing private method for testing
+        expect(fixture.componentInstance.selectedAnswers()[0]).toBe(false);
+        // @ts-expect-error Accessing private method for testing
+        fixture.componentInstance.toggleAnswer(0);
+        // @ts-expect-error Accessing private method for testing
+        expect(fixture.componentInstance.selectedAnswers()[0]).toBe(true);
+        // @ts-expect-error Accessing private method for testing
+        fixture.componentInstance.toggleAnswer(0);
+        // @ts-expect-error Accessing private method for testing
+        expect(fixture.componentInstance.selectedAnswers()[0]).toBe(false);
     });
 
     it('onConfirm() reveals the current answer', () => {
         const fixture = TestBed.createComponent(QuizComponent);
         fixture.detectChanges();
         vi.runAllTimers();
-        (fixture.componentInstance as any).onStart(1);
+        // @ts-expect-error Accessing private method for testing
+        fixture.componentInstance.onStart(1);
         vi.runAllTimers();
-        expect((fixture.componentInstance as any).revealed()).toBe(false);
-        (fixture.componentInstance as any).onConfirm();
-        expect((fixture.componentInstance as any).revealed()).toBe(true);
+        // @ts-expect-error Accessing private method for testing
+        expect(fixture.componentInstance.revealed()).toBe(false);
+        // @ts-expect-error Accessing private method for testing
+        fixture.componentInstance.onConfirm();
+        // @ts-expect-error Accessing private method for testing
+        expect(fixture.componentInstance.revealed()).toBe(true);
     });
 
     it('onConfirm() increments score for a correct answer', () => {
         const fixture = TestBed.createComponent(QuizComponent);
         fixture.detectChanges();
         vi.runAllTimers();
-        (fixture.componentInstance as any).onStart(1);
+        // @ts-expect-error Accessing private method for testing
+        fixture.componentInstance.onStart(1);
         vi.runAllTimers();
-        (fixture.componentInstance as any).toggleAnswer(0);
-        (fixture.componentInstance as any).onConfirm();
-        expect((fixture.componentInstance as any).score()).toBe(1);
+        // @ts-expect-error Accessing private method for testing
+        fixture.componentInstance.toggleAnswer(0);
+        // @ts-expect-error Accessing private method for testing
+        fixture.componentInstance.onConfirm();
+        // @ts-expect-error Accessing private method for testing
+        expect(fixture.componentInstance.score()).toBe(1);
     });
 
     it('onConfirm() does not increment score for a wrong answer', () => {
         const fixture = TestBed.createComponent(QuizComponent);
         fixture.detectChanges();
         vi.runAllTimers();
-        (fixture.componentInstance as any).onStart(1);
+        // @ts-expect-error Accessing private method for testing
+        fixture.componentInstance.onStart(1);
         vi.runAllTimers();
-        (fixture.componentInstance as any).toggleAnswer(1);
-        (fixture.componentInstance as any).onConfirm();
-        expect((fixture.componentInstance as any).score()).toBe(0);
+        // @ts-expect-error Accessing private method for testing
+        fixture.componentInstance.toggleAnswer(1);
+        // @ts-expect-error Accessing private method for testing
+        fixture.componentInstance.onConfirm();
+        // @ts-expect-error Accessing private method for testing
+        expect(fixture.componentInstance.score()).toBe(0);
     });
 
     it('onNext() after last question switches view to "finished"', () => {
         const fixture = TestBed.createComponent(QuizComponent);
         fixture.detectChanges();
         vi.runAllTimers();
-        (fixture.componentInstance as any).onStart(1);
+        // @ts-expect-error Accessing private method for testing
+        fixture.componentInstance.onStart(1);
         vi.runAllTimers();
-        (fixture.componentInstance as any).onConfirm();
-        (fixture.componentInstance as any).onNext();
+        // @ts-expect-error Accessing private method for testing
+        fixture.componentInstance.onConfirm();
+        // @ts-expect-error Accessing private method for testing
+        fixture.componentInstance.onNext();
         vi.runAllTimers();
-        expect((fixture.componentInstance as any).view()).toBe('finished');
+        // @ts-expect-error Accessing private method for testing
+        expect(fixture.componentInstance.view()).toBe('finished');
     });
 
     it('openSelectCard() switches the view to "select"', () => {
         const fixture = TestBed.createComponent(QuizComponent);
         fixture.detectChanges();
         vi.runAllTimers();
-        (fixture.componentInstance as any).openSelectCard();
+        // @ts-expect-error Accessing private method for testing
+        fixture.componentInstance.openSelectCard();
         vi.runAllTimers();
-        expect((fixture.componentInstance as any).view()).toBe('select');
+        // @ts-expect-error Accessing private method for testing
+        expect(fixture.componentInstance.view()).toBe('select');
     });
 
     it('backToStart() switches the view back to "start"', () => {
         const fixture = TestBed.createComponent(QuizComponent);
         fixture.detectChanges();
         vi.runAllTimers();
-        (fixture.componentInstance as any).openSelectCard();
+        // @ts-expect-error Accessing private method for testing
+        fixture.componentInstance.openSelectCard();
         vi.runAllTimers();
-        (fixture.componentInstance as any).backToStart();
+        // @ts-expect-error Accessing private method for testing
+        fixture.componentInstance.backToStart();
         vi.runAllTimers();
-        expect((fixture.componentInstance as any).view()).toBe('start');
+        // @ts-expect-error Accessing private method for testing
+        expect(fixture.componentInstance.view()).toBe('start');
     });
 
     describe('onKeydown()', () => {
@@ -208,9 +242,11 @@ describe('QuizComponent', () => {
             const fixture = TestBed.createComponent(QuizComponent);
             fixture.detectChanges();
             vi.runAllTimers();
-            const comp = fixture.componentInstance as any;
-            const startRef = comp.startRef();
+            const comp = fixture.componentInstance;
+            // @ts-expect-error Accessing private method for testing
+            const startRef = comp.startRef()!;
             const attemptStartSpy = vi.spyOn(startRef, 'attemptStart');
+            // @ts-expect-error Accessing private method for testing
             comp.onKeydown(new KeyboardEvent('keydown', { key: 'Space' }));
             expect(attemptStartSpy).not.toHaveBeenCalled();
         });
@@ -219,9 +255,11 @@ describe('QuizComponent', () => {
             const fixture = TestBed.createComponent(QuizComponent);
             fixture.detectChanges();
             vi.runAllTimers();
-            const comp = fixture.componentInstance as any;
-            const startRef = comp.startRef();
+            const comp = fixture.componentInstance;
+            // @ts-expect-error Accessing private method for testing
+            const startRef = comp.startRef()!;
             const attemptStartSpy = vi.spyOn(startRef, 'attemptStart');
+            // @ts-expect-error Accessing private method for testing
             comp.onKeydown(new KeyboardEvent('keydown', { key: 'Enter', repeat: true }));
             expect(attemptStartSpy).not.toHaveBeenCalled();
         });
@@ -230,9 +268,11 @@ describe('QuizComponent', () => {
             const fixture = TestBed.createComponent(QuizComponent);
             fixture.detectChanges();
             vi.runAllTimers();
-            const comp = fixture.componentInstance as any;
-            const startRef = comp.startRef();
+            const comp = fixture.componentInstance;
+            // @ts-expect-error Accessing private method for testing
+            const startRef = comp.startRef()!;
             const attemptStartSpy = vi.spyOn(startRef, 'attemptStart');
+            // @ts-expect-error Accessing private method for testing
             comp.onKeydown(new KeyboardEvent('keydown', { key: 'Enter' }));
             expect(attemptStartSpy).toHaveBeenCalledTimes(1);
         });

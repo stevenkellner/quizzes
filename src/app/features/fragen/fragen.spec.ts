@@ -77,7 +77,8 @@ describe('FragenComponent', () => {
         setupTestBed();
         await TestBed.compileComponents();
         const fixture = TestBed.createComponent(FragenComponent);
-        expect((fixture.componentInstance as any).loading()).toBe(true);
+        // @ts-expect-error Accessing private method for testing
+        expect(fixture.componentInstance.loading()).toBe(true);
     });
 
     it('renders all questions after loading', async () => {
@@ -94,7 +95,8 @@ describe('FragenComponent', () => {
         await TestBed.compileComponents();
         const fixture = TestBed.createComponent(FragenComponent);
         fixture.detectChanges();
-        expect((fixture.componentInstance as any).pageTitle()).toContain('Test Quiz');
+        // @ts-expect-error Accessing private method for testing
+        expect(fixture.componentInstance.pageTitle()).toContain('Test Quiz');
     });
 
     it('filters questions matching the search term', async () => {
@@ -177,7 +179,7 @@ describe('FragenComponent', () => {
         fixture.detectChanges();
 
         const location = TestBed.inject(Location);
-        const backSpy = vi.spyOn(location, 'back').mockImplementation(() => {});
+        const backSpy = vi.spyOn(location, 'back').mockImplementation(vi.fn());
         (fixture.nativeElement as HTMLElement).querySelector<HTMLButtonElement>('.back-link')!.click();
         expect(backSpy).toHaveBeenCalledTimes(1);
     });

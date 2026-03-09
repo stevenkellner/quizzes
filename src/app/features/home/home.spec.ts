@@ -33,7 +33,8 @@ describe('HomeComponent', () => {
         await TestBed.compileComponents();
         const fixture = TestBed.createComponent(HomeComponent);
         // ngOnInit hasn't run yet – loading signal is true
-        expect((fixture.componentInstance as any).loading()).toBe(true);
+        // @ts-expect-error Accessing private method for testing
+        expect(fixture.componentInstance.loading()).toBe(true);
     });
 
     it('renders the quiz list after loading succeeds', async () => {
@@ -79,6 +80,7 @@ describe('HomeComponent', () => {
         await TestBed.compileComponents();
         const fixture = TestBed.createComponent(HomeComponent);
         fixture.detectChanges();
-        expect((fixture.componentInstance as any).loading()).toBe(false);
+        // @ts-expect-error Accessing private method for testing
+        expect(fixture.componentInstance.loading()).toBe(false);
     });
 });

@@ -260,8 +260,8 @@ export class QuizComponent implements OnInit {
     protected onKeydown(event: KeyboardEvent): void {
         if (event.key !== 'Enter' || event.repeat) return;
         if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
-        const target = event.target as HTMLElement;
-        if (target.tagName === 'BUTTON' || target.tagName === 'A') return;
+        const target = event.target as HTMLElement | null;
+        if (target?.tagName === 'BUTTON' || target?.tagName === 'A') return;
         event.preventDefault();
         const v = this.view();
         if (v === 'start') this.startRef()?.attemptStart();
