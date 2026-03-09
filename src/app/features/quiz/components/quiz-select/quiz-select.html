@@ -24,7 +24,7 @@
                 role="listitem"
                 (click)="toggle.emit(entry.idx)"
                 (keydown.space)="$event.preventDefault(); toggle.emit(entry.idx)"
-                (keydown.enter)="toggle.emit(entry.idx)"
+                (keydown.enter)="$event.stopPropagation(); toggle.emit(entry.idx)"
                 tabindex="0"
                 [attr.aria-pressed]="isIndexSelected(entry.idx)"
                 [attr.aria-label]="'Frage ' + (entry.idx + 1) + ': ' + (entry.q.text || 'Kein Fragetext')"

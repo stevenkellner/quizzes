@@ -15,7 +15,6 @@ import { Question } from '../../../../models/quiz.model';
     templateUrl: './quiz-select.html',
     styleUrl: './quiz-select.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
-    host: { '(keydown)': 'onKeydown($event)' },
 })
 export class QuizSelectComponent {
     readonly allQuestions = input.required<Question[]>();
@@ -55,7 +54,7 @@ export class QuizSelectComponent {
         this.searchTerm.set(value);
     }
 
-    protected attemptStart(): void {
+    attemptStart(): void {
         if (this.selectedIndices().size === 0) {
             this.statusText.set('Bitte wähle mindestens eine Frage aus.');
             return;
@@ -67,12 +66,5 @@ export class QuizSelectComponent {
     focus(): void {
         this.searchTerm.set('');
         setTimeout(() => this.searchInputRef()?.nativeElement.focus(), 0);
-    }
-
-    protected onKeydown(event: KeyboardEvent): void {
-        if (event.key !== 'Enter' || event.repeat) return;
-        if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
-        event.preventDefault();
-        this.attemptStart();
     }
 }

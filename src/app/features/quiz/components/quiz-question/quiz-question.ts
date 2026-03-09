@@ -14,7 +14,6 @@ import { Question, StatusMessage } from '../../../../models/quiz.model';
     templateUrl: './quiz-question.html',
     styleUrl: './quiz-question.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
-    host: { '(keydown)': 'onKeydown($event)' },
 })
 export class QuizQuestionComponent {
     readonly question = input.required<Question>();
@@ -43,7 +42,7 @@ export class QuizQuestionComponent {
         }, 0);
     }
 
-    protected onAction(): void {
+    onAction(): void {
         if (!this.revealed()) {
             this.confirm.emit();
         } else {
@@ -53,14 +52,5 @@ export class QuizQuestionComponent {
 
     protected onImageError(img: HTMLImageElement): void {
         img.hidden = true;
-    }
-
-    protected onKeydown(event: KeyboardEvent): void {
-        if (event.key !== 'Enter' || event.repeat) return;
-        if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
-        const target = event.target as HTMLElement;
-        if (target.tagName === 'BUTTON' || target.tagName === 'A') return;
-        event.preventDefault();
-        this.onAction();
     }
 }

@@ -23,6 +23,7 @@ type QuizView = 'start' | 'select' | 'question' | 'finished';
     styleUrl: './quiz.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [RouterLink, QuizStartComponent, QuizSelectComponent, QuizQuestionComponent, QuizFinishedComponent],
+    host: { '(document:keydown)': 'onKeydown($event)' },
 })
 export class QuizComponent implements OnInit {
     private readonly route = inject(ActivatedRoute);
@@ -252,6 +253,19 @@ export class QuizComponent implements OnInit {
             this.selectedAnswers.set(nextQ.answers.map(() => false));
             setTimeout(() => this.questionRef()?.focus(), 0);
         }
+    }
+
+    protected onKeydown(event: KeyboardEvent): void {
+        if (event.key !== 'Enter' || event.repeat) return;
+        if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
+        const target = event.target as HTMLElement;
+        if (target.tagName === 'BUTTON' || target.tagName === 'A') return;
+        event.preventDefault();
+        const v = this.view();
+        if (v === 'start') this.startRef()?.attemptStart();
+        else if (v === 'select') this.selectRef()?.attemptStart();
+        else if (v === 'question') this.questionRef()?.onAction();
+        else if (v === 'finished') this.onRestart();
     }
 
     private finishQuiz(): void {

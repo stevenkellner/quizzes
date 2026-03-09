@@ -15,7 +15,6 @@ import { RouterLink } from '@angular/router';
     styleUrl: './quiz-start.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
     imports: [RouterLink],
-    host: { '(keydown)': 'onKeydown($event)' },
 })
 export class QuizStartComponent {
     readonly maxQuestions = input.required<number>();
@@ -28,7 +27,7 @@ export class QuizStartComponent {
 
     private readonly countInputRef = viewChild<ElementRef<HTMLInputElement>>('countInput');
 
-    protected attemptStart(): void {
+    attemptStart(): void {
         const inputEl = this.countInputRef()?.nativeElement;
         if (!inputEl) return;
         const max = this.maxQuestions();
@@ -44,12 +43,5 @@ export class QuizStartComponent {
 
     focus(): void {
         setTimeout(() => this.countInputRef()?.nativeElement.focus(), 0);
-    }
-
-    protected onKeydown(event: KeyboardEvent): void {
-        if (event.key !== 'Enter' || event.repeat) return;
-        if (event.altKey || event.ctrlKey || event.metaKey || event.shiftKey) return;
-        event.preventDefault();
-        this.attemptStart();
     }
 }
