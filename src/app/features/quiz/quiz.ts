@@ -183,7 +183,6 @@ export class QuizComponent implements OnInit {
         this.questionStatusMessage.set({ text: '', kind: 'neutral' });
         this.selectedAnswers.set(questionsSubset[0]?.answers.map(() => false) ?? []);
         this.view.set('question');
-        setTimeout(() => this.questionRef()?.focus(), 0);
     }
 
     protected toggleAnswer(answerIdx: number): void {
@@ -253,7 +252,6 @@ export class QuizComponent implements OnInit {
             this.revealed.set(false);
             this.questionStatusMessage.set({ text: '', kind: 'neutral' });
             this.selectedAnswers.set(nextQ.answers.map(() => false));
-            setTimeout(() => this.questionRef()?.focus(), 0);
         }
     }
 

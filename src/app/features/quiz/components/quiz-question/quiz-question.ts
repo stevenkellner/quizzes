@@ -37,10 +37,6 @@ export class QuizQuestionComponent {
               : 'Nächste Frage'
     );
 
-    focus(): void {
-        this.questionViewRef()?.focus();
-    }
-
     onAction(): void {
         if (!this.revealed()) {
             this.confirm.emit();

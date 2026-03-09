@@ -1,10 +1,8 @@
 import {
     ChangeDetectionStrategy,
     Component,
-    ElementRef,
     input,
     output,
-    viewChild,
 } from '@angular/core';
 import { Question } from '../../../models/quiz.model';
 
@@ -35,14 +33,6 @@ export class QuestionViewComponent {
 
     // optional 1-based number prefix (e.g. review list)
     readonly questionNumber = input<number | null>(null);
-
-    private readonly answersRef = viewChild<ElementRef<HTMLElement>>('answersRef');
-
-    focus(): void {
-        setTimeout(() => {
-            this.answersRef()?.nativeElement.querySelector<HTMLElement>('label')?.focus();
-        }, 0);
-    }
 
     protected isIncorrectSelected(idx: number): boolean {
         return !this.question().answers[idx].isCorrect && this.selectedInReview().has(idx);
