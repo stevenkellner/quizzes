@@ -1,0 +1,178 @@
+<main class="app" (keydown)="onKeydown($event)">
+    <header class="topbar">
+        <h1>{{ quizTitle() }}</h1>
+        <p aria-live="polite">{{ progressText() }}</p>
+    </header>
+
+    @if (loading()) {
+        <section class="card">
+            <p class="muted">Fragen werden geladen…</p>
+        </section>
+    } @else if (loadError()) {
+        <section class="card" role="alert">
+            <p class="muted">{{ loadError() }}</p>
+            <a routerLink="/" class="back-link">← Zur Auswahl</a>
+        </section>
+    } @else {
+
+        <!-- ── Start Card ── -->
+        @if (view() === 'start') {
+            <section class="card" aria-labelledby="start-heading">
+                <h2 id="start-heading" class="question">Quiz starten</h2>
+                <a routerLink="/" class="back-link">← Zur Auswahl</a>
+                <div class="start-form">
+                    <label for="questionCountId">Wie viele Fragen sollen gestellt werden?</label>
+                    <div class="start-row">
+                        <input
+                            #questionCountInput
+                            id="questionCountId"
+                            type="number"
+                            [min]="1"
+                            [max]="maxQuestions()"
+                            [value]="defaultCount()"
+                            required
+                            class="count-input"
+                            aria-describedby="status-msg"
+                        />
+                    </div>
+                </div>
+                <div class="or-divider" aria-hidden="true">oder</div>
+                <button type="button" class="secondary-btn" (click)="openSelectCard()">
+                    Fragen manuell auswählen →
+                </button>
+            </section>
+        }
+
+        <!-- ── Select Card ── -->
+        @if (view() === 'select') {
+            <section class="card" aria-labelledby="select-heading">
+                <h2 id="select-heading" class="question">Fragen auswählen</h2>
+                <button type="button" class="back-btn" (click)="backToStart()">← Zurück</button>
+                <div class="select-toolbar">
+                    <input
+                        #selectSearch
+                        type="search"
+                        placeholder="Fragen durchsuchen…"
+                        [value]="selectSearchTerm()"
+                        (input)="onSearchInput($any($event.target).value)"
+                        aria-label="Fragen durchsuchen"
+                    />
+                    <div class="select-btn-group">
+                        <button type="button" (click)="selectAll()">Alle</button>
+                        <button type="button" (click)="deselectAll()">Keine</button>
+                    </div>
+                </div>
+                <p class="select-info" aria-live="polite">{{ selectInfoText() }}</p>
+                <div class="select-list" role="list" aria-label="Fragenliste">
+                    @for (entry of filteredSelectEntries(); track entry.idx) {
+                        <div
+                            class="select-entry"
+                            [class.selected]="isIndexSelected(entry.idx)"
+                            role="listitem"
+                            (click)="toggleSelectEntry(entry.idx)"
+                            (keydown.space)="$event.preventDefault(); toggleSelectEntry(entry.idx)"
+                            (keydown.enter)="toggleSelectEntry(entry.idx)"
+                            tabindex="0"
+                            [attr.aria-pressed]="isIndexSelected(entry.idx)"
+                            [attr.aria-label]="'Frage ' + (entry.idx + 1) + ': ' + (entry.q.text || 'Kein Fragetext')"
+                        >
+                            <span class="select-entry-num" aria-hidden="true">{{ entry.idx + 1 }}.</span>
+                            <span class="select-entry-text">{{ entry.q.text || '(Kein Fragetext)' }}</span>
+                            <span class="select-checkbox" aria-hidden="true"></span>
+                        </div>
+                    }
+                    @if (filteredSelectEntries().length === 0) {
+                        <p class="select-no-results">Keine Ergebnisse gefunden.</p>
+                    }
+                </div>
+            </section>
+        }
+
+        <!-- ── Question Card ── -->
+        @if (view() === 'question') {
+            @let q = currentQuestion();
+            @if (q) {
+                <section class="card" aria-labelledby="question-heading">
+                    <h2 id="question-heading" class="question">{{ q.text || '(Kein Fragetext)' }}</h2>
+                    @if (q.imageUrl) {
+                        <img
+                            class="question-image"
+                            [src]="q.imageUrl"
+                            alt="Fragenillustration"
+                            (error)="onImageError($any($event.target))"
+                        />
+                    }
+                    <div
+                        #answersForm
+                        class="answers"
+                        role="group"
+                        aria-labelledby="question-heading"
+                    >
+                        @for (answer of q.answers; track answer.text; let i = $index) {
+                            <label
+                                class="answer-item"
+                                [class.correct]="revealed() && answer.isCorrect"
+                                [class.incorrect]="revealed() && !answer.isCorrect"
+                            >
+                                <input
+                                    type="checkbox"
+                                    name="answer"
+                                    [value]="i"
+                                    [checked]="selectedAnswers()[i]"
+                                    [disabled]="revealed()"
+                                    (change)="toggleAnswer(i)"
+                                />
+                                <span>{{ answer.text }}</span>
+                            </label>
+                        }
+                    </div>
+                </section>
+            }
+        }
+
+        <!-- ── Finished / Review Card ── -->
+        @if (view() === 'finished' && wrongAnswers().length > 0) {
+            <section class="card review-card" aria-labelledby="review-heading">
+                <h2 id="review-heading" class="question">Falsche Antworten</h2>
+                <div class="review-list">
+                    @for (wa of wrongAnswers(); track wa.question.text; let i = $index) {
+                        <div class="review-entry">
+                            <p class="review-question">{{ i + 1 }}. {{ wa.question.text || '(Kein Fragetext)' }}</p>
+                            @if (wa.question.imageUrl) {
+                                <img class="question-image" [src]="wa.question.imageUrl" alt="Fragenillustration" />
+                            }
+                            @for (answer of wa.question.answers; track answer.text; let j = $index) {
+                                <div
+                                    class="review-answer"
+                                    [class.correct]="answer.isCorrect"
+                                    [class.incorrect]="!answer.isCorrect && wa.selected.has(j)"
+                                >
+                                    {{ answer.text }}
+                                </div>
+                            }
+                        </div>
+                    }
+                </div>
+            </section>
+        }
+
+        <!-- ── Action Bar ── -->
+        <div class="actions">
+            <p
+                id="status-msg"
+                class="status"
+                [class.correct]="statusMessage().kind === 'correct'"
+                [class.incorrect]="statusMessage().kind === 'incorrect'"
+                aria-live="polite"
+                aria-atomic="true"
+            >{{ statusMessage().text }}</p>
+            <button
+                type="button"
+                [disabled]="actionButtonDisabled()"
+                (click)="onActionClick()"
+            >
+                {{ actionButtonText() }}
+            </button>
+        </div>
+    }
+</main>

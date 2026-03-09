@@ -1,0 +1,149 @@
+.back-link {
+    display: inline-block;
+    background: none;
+    color: var(--accent);
+    padding: 0;
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:focus-visible {
+        outline: 3px solid rgba(13, 106, 139, 0.35);
+        outline-offset: 2px;
+        border-radius: 3px;
+    }
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    color: var(--accent);
+    padding: 0;
+    font-size: 0.95rem;
+    margin-bottom: 14px;
+    cursor: pointer;
+    display: inline-block;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:focus-visible {
+        outline: 3px solid rgba(13, 106, 139, 0.35);
+        outline-offset: 2px;
+        border-radius: 3px;
+    }
+}
+
+.start-form {
+    display: grid;
+    gap: 10px;
+
+    label {
+        font-weight: 600;
+    }
+}
+
+.start-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.count-input {
+    width: min(380px, 100%);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    height: auto;
+    color: var(--ink);
+    font-family: inherit;
+    margin-top: 10px;
+
+    &:focus-visible {
+        outline: 3px solid rgba(13, 106, 139, 0.28);
+        outline-offset: 1px;
+    }
+}
+
+.or-divider {
+    margin-top: 16px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.secondary-btn {
+    margin-top: 10px;
+    width: 100%;
+    background: var(--card);
+    color: var(--accent);
+    border: 1px solid var(--line);
+    font-size: 1rem;
+    padding: 12px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: left;
+
+    &:hover {
+        background: #f0f4f7;
+    }
+
+    &:focus-visible {
+        outline: 3px solid rgba(13, 106, 139, 0.35);
+        outline-offset: 2px;
+    }
+}
+
+.review-card {
+    margin-top: 16px;
+}
+
+.review-list {
+    display: grid;
+    gap: 20px;
+}
+
+.review-entry {
+    border-top: 1px solid var(--line);
+    padding-top: 14px;
+
+    &:first-child {
+        border-top: none;
+        padding-top: 0;
+    }
+}
+
+.review-question {
+    margin: 0 0 10px;
+    font-weight: 600;
+    line-height: 1.4;
+    white-space: pre-line;
+}
+
+.review-answer {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+    line-height: 1.35;
+
+    &.correct {
+        border-color: #73b894;
+        background: #edf8f1;
+        color: var(--ok);
+    }
+
+    &.incorrect {
+        border-color: #df9892;
+        background: #fdf1f0;
+        color: var(--bad);
+    }
+}

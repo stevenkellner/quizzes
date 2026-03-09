@@ -1,0 +1,129 @@
+.back-link {
+    background: none;
+    color: var(--accent);
+    font-size: 0.95rem;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:focus-visible {
+        outline: 3px solid rgba(13, 106, 139, 0.35);
+        outline-offset: 2px;
+        border-radius: 3px;
+    }
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+
+    input {
+        flex: 1;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 11px 14px;
+        font-size: 1rem;
+        font-family: inherit;
+        color: var(--ink);
+
+        &:focus-visible {
+            outline: 3px solid rgba(13, 106, 139, 0.28);
+            outline-offset: 1px;
+        }
+    }
+}
+
+.search-info {
+    margin: 0 0 14px;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+.fragen-list {
+    display: grid;
+    gap: 14px;
+}
+
+.fragen-entry {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 16px 18px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+
+    img {
+        display: block;
+        width: 100%;
+        max-height: 300px;
+        object-fit: contain;
+        border-radius: 8px;
+        border: 1px solid var(--line);
+        background: #f7f9fb;
+        margin-bottom: 12px;
+    }
+}
+
+.fragen-question {
+    margin: 0 0 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    white-space: pre-line;
+    color: var(--ink);
+}
+
+.fragen-answers {
+    display: grid;
+    gap: 6px;
+}
+
+.fragen-answer {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 0.92rem;
+    line-height: 1.35;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &.correct {
+        border-color: #73b894;
+        background: #edf8f1;
+        color: var(--ok);
+        font-weight: 600;
+    }
+}
+
+.marker {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    border: 2px solid currentColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+
+    .correct & {
+        &::after {
+            content: "✓";
+        }
+    }
+}
+
+mark {
+    background: #fff0a0;
+    border-radius: 3px;
+    padding: 0 1px;
+}
+
+.no-results {
+    color: var(--muted);
+    padding: 20px 0;
+    text-align: center;
+}

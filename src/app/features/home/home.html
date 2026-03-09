@@ -1,0 +1,27 @@
+<main class="app">
+    <header class="topbar">
+        <h1>Prüfungsvorbereitung</h1>
+        <p>Wähle ein Quiz aus</p>
+    </header>
+
+    <section class="card" aria-labelledby="quiz-select-heading">
+        <h2 id="quiz-select-heading" class="question">Quiz auswählen</h2>
+
+        @if (loading()) {
+            <p class="muted">Quizze werden geladen…</p>
+        } @else if (error()) {
+            <p class="muted" role="alert">{{ error() }}</p>
+        } @else if (quizzes().length === 0) {
+            <p class="muted">Keine Quizze verfügbar.</p>
+        } @else {
+            <ul class="quiz-list" aria-label="Verfügbare Quizze">
+                @for (quiz of quizzes(); track quiz.id) {
+                    <li class="quiz-row">
+                        <a [routerLink]="['/quiz', quiz.id]" class="quiz-link">{{ quiz.title }}</a>
+                        <a [routerLink]="['/fragen', quiz.id]" class="quiz-fragen-link">Fragenübersicht</a>
+                    </li>
+                }
+            </ul>
+        }
+    </section>
+</main>
