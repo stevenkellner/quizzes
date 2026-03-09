@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, inject, OnInit, signal } from '@angular/core';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 import { Question } from '../../models/quiz.model';
 import { QuizService } from '../../services/quiz.service';
 import { QuestionViewComponent } from '../../shared/components/question-view/question-view';
@@ -9,11 +10,12 @@ import { QuestionViewComponent } from '../../shared/components/question-view/que
     templateUrl: './fragen.html',
     styleUrl: './fragen.scss',
     changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [RouterLink, QuestionViewComponent],
+    imports: [QuestionViewComponent],
 })
 export class FragenComponent implements OnInit {
     private readonly route = inject(ActivatedRoute);
     private readonly quizService = inject(QuizService);
+    private readonly location = inject(Location);
 
     protected readonly loading = signal(true);
     protected readonly loadError = signal<string | null>(null);
@@ -39,7 +41,7 @@ export class FragenComponent implements OnInit {
     });
 
     ngOnInit(): void {
-        const id = this.route.snapshot.paramMap.get('id');
+        const id = this.route.snapshot.paramMap.get('id') ?? '';
 
         this.quizService.loadConfig().subscribe({
             next: configs => {
@@ -72,5 +74,9 @@ export class FragenComponent implements OnInit {
 
     protected onSearchInput(value: string): void {
         this.searchTerm.set(value);
+    }
+
+    protected goBack(): void {
+        this.location.back();
     }
 }
