@@ -35,6 +35,7 @@ export class QuizStateService {
 
     readonly questionStatusMessage = signal<StatusMessage>({ text: '', kind: 'neutral' });
     readonly finishedStatusMessage = signal<StatusMessage>({ text: '', kind: 'neutral' });
+    readonly finishedStats = signal<{ score: number; total: number; percent: string; timeStr: string } | null>(null);
 
     readonly maxQuestions = computed(() => this.allQuestions().length);
 
@@ -271,6 +272,7 @@ export class QuizStateService {
             text: `Quiz beendet. Ergebnis: ${percent}% (${this.score()} / ${this.questions().length} richtig) – Zeit: ${timeStr}`,
             kind: 'neutral',
         });
+        this.finishedStats.set({ score: this.score(), total: this.questions().length, percent, timeStr });
         this.view.set('finished');
     }
 }

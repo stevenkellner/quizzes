@@ -1,5 +1,65 @@
+.result-card {
+    text-align: center;
+}
+
+.result-title {
+    margin: 0 0 16px;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--ink);
+}
+
+.title-divider {
+    width: 95%;
+    height: 2px;
+    background: var(--accent);
+    margin: 0 auto 16px;
+    border-radius: 1px;
+}
+
+.result-stats {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 0;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    flex: 1;
+    padding: 4px 8px;
+}
+
+.stat-value {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1.1;
+}
+
+.stat-label {
+    font-size: 0.78rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.stat-divider {
+    width: 1px;
+    background: var(--line);
+    align-self: stretch;
+    margin: 4px 0;
+}
+
 .review-card {
     margin-top: 16px;
+}
+
+.action-btn {
+    margin-left: auto;
 }
 
 .review-list {

@@ -1,7 +1,9 @@
 <main class="app">
     <header class="topbar">
         <h1>{{ state.quizTitle() }}</h1>
-        <p aria-live="polite">{{ state.progressText() }}</p>
+        @if (state.view() !== 'finished') {
+            <p aria-live="polite">{{ state.progressText() }}</p>
+        }
     </header>
 
     @if (state.loading()) {
