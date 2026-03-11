@@ -16,6 +16,23 @@
                 aria-describedby="start-status"
             />
         </div>
+        <label class="toggle-row" for="show-answer-toggle">
+            <span>Korrekte Antwort nach jeder Frage anzeigen</span>
+            <span
+                class="toggle-track"
+                [class.on]="state.showAnswerAfterGuess()"
+                aria-hidden="true"
+            >
+                <span class="toggle-thumb"></span>
+            </span>
+            <input
+                id="show-answer-toggle"
+                type="checkbox"
+                class="toggle-input"
+                [checked]="state.showAnswerAfterGuess()"
+                (change)="state.setShowAnswerAfterGuess($any($event.target).checked)"
+            />
+        </label>
     </div>
     <div class="or-divider" aria-hidden="true">oder</div>
     <button type="button" class="secondary-btn" (click)="state.navigateToSelect()">

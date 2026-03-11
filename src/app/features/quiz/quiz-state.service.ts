@@ -31,6 +31,8 @@ export class QuizStateService {
     readonly selectedAnswers = signal<boolean[]>([]);
     readonly selectedIndices = signal<Set<number>>(new Set());
 
+    readonly showAnswerAfterGuess = signal(true);
+
     readonly questionStatusMessage = signal<StatusMessage>({ text: '', kind: 'neutral' });
     readonly finishedStatusMessage = signal<StatusMessage>({ text: '', kind: 'neutral' });
 
@@ -165,8 +167,16 @@ export class QuizStateService {
         this.selectedAnswers.update(arr => arr.map((_, i) => i !== exceptIdx));
     }
 
+    setShowAnswerAfterGuess(value: boolean): void {
+        this.showAnswerAfterGuess.set(value);
+    }
+
     confirmAnswer(): void {
         this.revealCurrentAnswer();
+        if (!this.showAnswerAfterGuess()) {
+            // Skip the reveal screen and go straight to next question
+            this.goToNextOrFinish();
+        }
     }
 
     nextQuestion(): void {
