@@ -6,9 +6,6 @@ on:
     pull_request:
         branches: [main]
 
-env:
-    FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 jobs:
     build:
         name: Build
@@ -67,8 +64,21 @@ jobs:
                   node-version: 22
                   cache: npm
             - run: npm ci
+            - name: Get Playwright version
+              id: playwright-version
+              run: echo "version=$(npx playwright --version | awk '{print $2}')" >> $GITHUB_OUTPUT
+            - name: Cache Playwright browsers
+              id: playwright-cache
+              uses: actions/cache@v4
+              with:
+                  path: ~/.cache/ms-playwright
+                  key: playwright-browsers-${{ steps.playwright-version.outputs.version }}
             - name: Install Playwright browsers
+              if: steps.playwright-cache.outputs.cache-hit != 'true'
               run: npx playwright install --with-deps chromium firefox webkit
+            - name: Install Playwright system dependencies
+              if: steps.playwright-cache.outputs.cache-hit == 'true'
+              run: npx playwright install-deps chromium firefox webkit
             - name: Run E2E tests
               run: npx ng e2e
               env:
