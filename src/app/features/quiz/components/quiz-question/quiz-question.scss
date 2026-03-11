@@ -1,10 +1,11 @@
 // Answers layout and answer-item styles are in global styles.scss
 
 .hotkey-hint {
-    margin: 8px 0 0;
+    flex: 1;
+    margin: 0;
     font-size: 0.72rem;
     color: var(--muted);
-    text-align: center;
+    text-align: left;
     line-height: 1.8;
 
     kbd {

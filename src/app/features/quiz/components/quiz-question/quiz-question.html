@@ -16,7 +16,6 @@
         aria-live="polite"
         aria-atomic="true"
     >{{ state.questionStatusMessage().text }}</p>
-    <button type="button" (click)="onAction()">{{ actionButtonText() }}</button>
     @if (!state.revealed()) {
         <p class="hotkey-hint" aria-hidden="true">
             <kbd>1</kbd>–<kbd>N</kbd> Antwort wählen &nbsp;·&nbsp;
@@ -26,4 +25,5 @@
             <kbd>Enter</kbd> Bestätigen
         </p>
     }
+    <button type="button" (click)="onAction()">{{ actionButtonText() }}</button>
 </div>
